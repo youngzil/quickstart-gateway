@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<parent>
 		<groupId>org.quickstart</groupId>
 		<artifactId>quickstart-all</artifactId>
@@ -21,10 +23,10 @@
 	</dependencies>
 
 	<modules>
-		<module>quickstart-gateway-litte-proxy</module>
-		<module>quickstart-gateway-kong</module>
-		<module>quickstart-gateway-nginx</module>
-    <module>quickstart-gateway-tengine</module>
-  </modules>
+		<module>quickstart-litte-proxy</module>
+		<module>quickstart-kong</module>
+		<module>quickstart-nginx</module>
+		<module>quickstart-tengine</module>
+	</modules>
 
 </project>

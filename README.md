@@ -1,3 +1,7 @@
+原项目地址
+https://gitee.com/youngzil/quickstart-all
+
+
 API Gateway:
 APIGateway 即API网关，所有请求首先会经过这个网关，然后到达后端服务，有点类似于Facade模式。API网关作为系统接口对外的统一出口，可以减少调用方对服务实现的感知。 
 http://blog.csdn.net/Tredemere/article/details/78246413?locationNum=10&fps=1
