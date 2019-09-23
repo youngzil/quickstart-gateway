@@ -27,6 +27,9 @@ https://www.getlantern.org
 
 Nginx、Apache Httpd
 
+openresty
+https://openresty.org/cn/
+
 
 Projects Using Zuul:
 https://cloud.spring.io/

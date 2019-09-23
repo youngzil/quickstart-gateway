@@ -6,6 +6,10 @@ https://www.nginx.com/
 https://www.nginx.com/resources/wiki/
 
 
+下载
+https://nginx.org/en/download.html
+
+
 https://github.com/nginx/nginx
 https://github.com/dockerfile/nginx
 http://dockerfile.github.io/#/nginx
