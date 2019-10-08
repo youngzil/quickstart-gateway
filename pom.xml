@@ -27,6 +27,7 @@
 		<module>quickstart-kong</module>
 		<module>quickstart-nginx</module>
 		<module>quickstart-tengine</module>
+		<module>quickstart-zuul</module>
 	</modules>
 
 </project>

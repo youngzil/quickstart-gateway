@@ -1,9 +1,7 @@
 1、下载
 2、编译安装和运行
    nginx.conf文件的结构
-
-
-
+3、负载均衡和健康检查
 
 
 ---------------------------------------------------------------------------------------------------------------------
@@ -62,7 +60,8 @@ https://www.jianshu.com/p/12a1dc4ab7a0
 
 
 1、进入根目录，使用以下命令配置并生成Makefile 文件和 objs文件夹：
-./configure --prefix=/Users/yangzl/Downloads/nginx1.17.3 --with-pcre=/Users/yangzl/Downloads/pcre-8.43
+./configure --prefix=/Users/yangzl/mysoft/nginx1.17.3 --with-pcre=/Users/yangzl/mysoft/pcre-8.43
+
 
 ./configure --prefix=/Users/yangzl/mysoft/nginx1.17.3 --with-pcre=/Users/yangzl/mysoft/pcre-8.43
 
@@ -74,6 +73,10 @@ https://www.jianshu.com/p/12a1dc4ab7a0
 在线安装所需依赖工具：yum -y install gcc gcc-c++ automake pcre pcre-devel zlib zlib-devel open openssl-devel
 生成的 Nginx 软件的Makefile文件就保存在当前的工作目录。
 常用的依赖：PCRE library、OpenSSL library、system zlib
+
+
+
+make && make install
 
 
 2、得到了 Nginx 的 Makefile 文件后，在/app/nginx/nginx-1.6.3-compile/nginx-1.6.3目录下使用 make 文件进行编译：
@@ -91,10 +94,22 @@ https://www.jianshu.com/p/12a1dc4ab7a0
     sbin 目录，目前只有nginx一个文件，这就是Nginx服务器的主程序了。
 
 5、进入sbin目录下
+./sbin/nginx -V 查看所有加载的模块
 ./sbin/nginx -h   查看使用帮助
 ./sbin/nginx   启动
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 
+
+/usr/local/nginx/sbin/nginx start|stop|restart 启动和关闭ngix服务
+ 访问 http://ip地址
+
+ 5》nginx命令参数
+   nginx -m 显示所有加载的模块
+   nginx -l 显示所有可以使用的指令
+   nginx -t 检查nginx的配置文件是否正确
+   nginx 启动nginx
+   nginx -s reload 重启nginx
+   nginx -s stop 停止nginx
 
 
 
@@ -168,5 +183,102 @@ https://www.jianshu.com/p/320a48fcef57
 https://blog.csdn.net/tjcyjd/article/details/50695922
 
 ---------------------------------------------------------------------------------------------------------------------
+3、负载均衡和健康检查
+
+
+Nginx负载均衡策略
+1、轮询	默认方式
+2、weight	权重方式
+3、ip_hash	依据ip分配方式
+4、least_conn	最少连接方式
+5、fair（第三方）	响应时间方式
+6、url_hash（第三方）	依据URL分配方式
+
+1、轮询（round-robin）
+这是nginx默认的负载均衡策略
+有如下参数：
+fail_timeout	与max_fails结合使用。
+max_fails	 设置在fail_timeout参数设置的时间内最大失败次数，如果在这个时间内，所有针对该服务器的请求都失败了，那么认为该服务器会被认为是停机了，
+fail_time	服务器会被认为停机的时间长度,默认为10s。
+backup	标记该服务器为备用服务器。当主服务器停止时，请求会被发送到它这里。
+down	标记服务器永久停机了。
+
+
+2、weight	权重方式
+#动态服务器组
+    upstream dynamic_zuoyu {
+        server localhost:8080   weight=2;  #tomcat 7.0
+        server localhost:8081;  #tomcat 8.0
+        server localhost:8082   backup;  #tomcat 8.5
+        server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0
+    }
+
+3、ip_hash	依据ip分配方式
+#动态服务器组
+    upstream dynamic_zuoyu {
+        ip_hash;    #保证每个访客固定访问一个后端服务器
+        server localhost:8080   weight=2;  #tomcat 7.0
+        server localhost:8081;  #tomcat 8.0
+        server localhost:8082;  #tomcat 8.5
+        server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0
+    }
+
+4、least_conn	最少连接方式，最少连接（least-connected）
+
+#动态服务器组
+    upstream dynamic_zuoyu {
+        least_conn;    #把请求转发给连接数较少的后端服务器
+        server localhost:8080   weight=2;  #tomcat 7.0
+        server localhost:8081;  #tomcat 8.0
+        server localhost:8082 backup;  #tomcat 8.5
+        server localhost:8083   max_fails=3 fail_timeout=20s;  #tomcat 9.0
+    }
+
+5、fair（第三方）	响应时间方式
+按照服务器端的响应时间来分配请求，响应时间短的优先分配。
+    #动态服务器组
+    upstream dynamic_zuoyu {
+        server localhost:8080;  #tomcat 7.0
+        server localhost:8081;  #tomcat 8.0
+        server localhost:8082;  #tomcat 8.5
+        server localhost:8083;  #tomcat 9.0
+        fair;    #实现响应时间短的优先分配
+    }
+
+
+6、url_hash（第三方）	依据URL分配方式
+ #动态服务器组
+    upstream dynamic_zuoyu {
+        hash $request_uri;    #实现每个url定向到同一个后端服务器
+        server localhost:8080;  #tomcat 7.0
+        server localhost:8081;  #tomcat 8.0
+        server localhost:8082;  #tomcat 8.5
+        server localhost:8083;  #tomcat 9.0
+    }
+    
+
+
+1.17.3 没有安装健康检查模块，配置check报错，但是会自动检测
+
+
+负载均衡策略参考
+https://www.cnblogs.com/1214804270hacker/p/9325150.html
+
+
+健康检测参考
+https://blog.csdn.net/yanggd1987/article/details/84191746
+https://blog.csdn.net/wsxxdwwzjdy/article/details/79203829
+https://blog.csdn.net/liaomin416100569/article/details/72897641
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+
+
+
 
 

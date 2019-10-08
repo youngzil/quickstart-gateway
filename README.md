@@ -1,5 +1,7 @@
-原项目地址
-https://gitee.com/youngzil/quickstart-all
+项目地址
+https://github.com/youngzil/quickstart-gateway
+
+
 
 
 API Gateway:
