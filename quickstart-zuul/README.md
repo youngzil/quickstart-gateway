@@ -1,5 +1,5 @@
 参考
-quickstart-netflix/quickstart-netflix-zuul
+quickstart-netflix/quickstart-zuul
 
 
 https://www.novatec-gmbh.de/en/blog/api-gateways-an-evaluation-of-zuul-2/
