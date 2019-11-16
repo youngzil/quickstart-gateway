@@ -2,6 +2,12 @@
 https://github.com/youngzil/quickstart-gateway
 
 
+限流框架：Sentinel、resilience4j、Hystrix、SnowJena
+参考
+quickstart-netflix/quickstart-hystrix
+
+
+
 
 
 API Gateway:

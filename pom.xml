@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<groupId>org.quickstart</groupId>
-		<artifactId>quickstart-all</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
-	</parent>
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <parent>
+    <groupId>org.quickstart</groupId>
+    <artifactId>quickstart-all</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
 
-	<modelVersion>4.0.0</modelVersion>
-	<artifactId>quickstart-gateway</artifactId>
-	<packaging>pom</packaging>
-	<name>${project.artifactId}-${project.version}</name>
-	<url>http://maven.apache.org</url>
-	<description>Demo project for XXX</description>
+  <modelVersion>4.0.0</modelVersion>
+  <artifactId>quickstart-gateway</artifactId>
+  <packaging>pom</packaging>
+  <name>${project.artifactId}-${project.version}</name>
+  <url>http://maven.apache.org</url>
+  <description>Demo project for XXX</description>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-	</properties>
+  <properties>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+  </properties>
 
-	<dependencies>
-	</dependencies>
+  <dependencies>
+  </dependencies>
 
-	<modules>
-		<module>quickstart-litte-proxy</module>
-		<module>quickstart-kong</module>
-		<module>quickstart-nginx</module>
-		<module>quickstart-tengine</module>
-		<module>quickstart-zuul</module>
-	</modules>
+  <modules>
+    <module>quickstart-litte-proxy</module>
+    <module>quickstart-kong</module>
+    <module>quickstart-nginx</module>
+    <module>quickstart-tengine</module>
+    <module>quickstart-zuul</module>
+
+    <!--    限流熔断降级-->
+    <module>quickstart-sentinel</module>
+    <module>quickstart-resilience4j</module>
+    <module>quickstart-snowjena</module>
+  </modules>
 
 </project>
