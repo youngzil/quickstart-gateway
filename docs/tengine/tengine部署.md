@@ -38,6 +38,10 @@ make && make install
 ./sbin/nginx   启动
 /usr/local/nginx/sbin/nginx -c /usr/local/nginx/conf/nginx.conf
 
+/usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件
+/usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx
+/usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx
+
 
 4、Nginx 服务的停止
 查看进程号
