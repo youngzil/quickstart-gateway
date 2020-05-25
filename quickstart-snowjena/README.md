@@ -1,6 +1,9 @@
 Distributed lock-free current limiting framework based on token bucket algorithm.基于令牌桶算法实现的分布式无锁限流框架。 
 https://yueshutong.github.io/SnowJena/
 
+SnowJena - 基于令牌桶算法实现的分布式无锁限流框架
+
+
 
 https://github.com/yueshutong/SnowJena/blob/master/CN_README.md
 

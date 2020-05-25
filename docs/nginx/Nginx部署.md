@@ -3,7 +3,7 @@
    nginx.conf文件的结构
 3、负载均衡和健康检查
 4、记一次生产环境Nginx间歇性502的事故分析过程
-
+nginx配置打印日志格式
 
 ---------------------------------------------------------------------------------------------------------------------
 下载
@@ -290,11 +290,21 @@ https://blog.csdn.net/liaomin416100569/article/details/72897641
 https://xiezefan.me/2017/09/27/nginx-502-bug-trace/
 
 ---------------------------------------------------------------------------------------------------------------------
+nginx配置打印日志格式
 
 
-
-
-
+log_format main escape=json '{ "@timestamp": "$time_iso8601", '
+                       '"remote_addr": "$remote_addr",'
+                       '"costime": "$request_time",'
+                       '"realtime": "$upstream_response_time",'
+                       '"status": $status,'
+                       '"x_forwarded": "$http_x_forwarded_for",'
+                       '"referer": "$http_referer",'
+                       '"request": "$request",'
+                       '"upstr_addr": "$upstream_addr",'
+                       '"bytes":$body_bytes_sent,'
+                       '"dm":$request_body,'
+                       '"agent": "$http_user_agent" }';
 
 ---------------------------------------------------------------------------------------------------------------------
 
