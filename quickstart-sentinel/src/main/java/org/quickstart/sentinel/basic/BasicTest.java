@@ -11,7 +11,7 @@ import com.alibaba.csp.sentinel.slots.block.flow.FlowRule;
 import com.alibaba.csp.sentinel.slots.block.flow.FlowRuleManager;
 
 /**
- * @author youngzil@163.com
+ * @author yangzl
  * @description TODO
  * @createTime 2019/11/7 16:22
  */

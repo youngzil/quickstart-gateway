@@ -1,7 +1,7 @@
 package org.quickstart.resilience4j;
 
 /**
- * @author youngzil@163.com
+ * @author yangzl
  * @description TODO
  * @createTime 2019/11/16 09:50
  */
