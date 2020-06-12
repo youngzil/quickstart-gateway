@@ -16,9 +16,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <java.encoding>UTF-8</java.encoding>
-    <maven.compiler.version>3.8.1</maven.compiler.version>
-    <resilience4j.version>1.1.0</resilience4j.version>
+    <resilience4j.version>1.5.0</resilience4j.version>
   </properties>
 
   <dependencies>
@@ -61,22 +59,6 @@
       <scope>test</scope>
     </dependency>
 
-
   </dependencies>
-
-  <build>
-    <plugins>
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-compiler-plugin</artifactId>
-        <version>${maven.compiler.version}</version>
-        <configuration>
-          <source>1.8</source>
-          <target>1.8</target>
-          <encoding>${java.encoding}</encoding>
-        </configuration>
-      </plugin>
-    </plugins>
-  </build>
 
 </project>

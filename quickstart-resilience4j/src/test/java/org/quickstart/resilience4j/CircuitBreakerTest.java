@@ -24,7 +24,7 @@ import io.github.resilience4j.timelimiter.TimeLimiterConfig;
 import io.vavr.control.Try;
 
 /**
- * @author youngzil@163.com
+ * @author yangzl
  * @description TODO
  * @createTime 2019/11/16 09:49
  */
