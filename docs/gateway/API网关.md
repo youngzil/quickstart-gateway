@@ -1,5 +1,5 @@
 1、网关功能的介绍和结构    
-2、常见的API网关    
+2、[网关的作用分类](#网关的作用分类)  
 3、    
 4、    
 5、    
@@ -114,72 +114,21 @@ https://juejin.im/post/5bda67f26fb9a0223e4da611
 http://jm.taobao.org/2019/01/14/%E5%BE%AE%E6%9C%8D%E5%8A%A1%E7%94%9F%E6%80%81/    
     
 ---------------------------------------------------------------------------------------------------------------------    
-    
-常见的API网关    
-1、Zuul1网关    
-2、Zuul2网关    
-3、Kong网关    
-4、基于 Go 的 Tyk    
-5、Spring Cloud Gateway    
-    
-6、有赞API网关、京东网关、唯品会、阿里    
-7、Openresty + lua    
-8、开源的能力开放平台参考    
-    
-    
-    
-对于 API Gateway，常见的选型有基于 Openresty 的 Kong、基于 Go 的 Tyk 和基于 Java 的 Zuul。    
-    
-    
-    
-Zuul1网关    
-    
-![zuul1结构](images/zuul1结构.png "ReferencePicture")    
-    
-就像上图中所描述的一样，Zuul 提供了四种过滤器的 API，分别为前置（Pre）、后置（Post）、路由（Route）和错误（Error）四种处理方式。    
-    
-参考    
-http://www.scienjus.com/api-gateway-and-netflix-zuul/    
-https://blog.csdn.net/ityouknow/article/details/79215698    
-    
-    
-    
-微服务路由网关（zuul-plus）    
-https://github.com/siaorg/sia-gateway    
-    
-    
-    
-Zuul2网关    
-![zuul2结构](images/zuul2结构图.png "ReferencePicture")    
-    
-    
-    
-有赞API网关    
-![有赞网关结构](images/有赞网关应用架构图.png "ReferencePicture")    
-    
-https://tech.youzan.com/api-gateway-in-practice/    
-    
-有赞服务回归验证平台 - 对比引擎    
-https://tech.youzan.com/youzan-service-regression-test-platform/    
-    
-    
-    
-京东网关    
-http://www.yunweipai.com/archives/23653.html    
-    
-    
-    
-唯品会API网关设计与实践    
-https://mp.weixin.qq.com/s/gREMe-G7nqNJJLzbZ3ed3A    
-    
-    
-    
-    
-开源的能力开放平台参考    
-https://gitee.com/owenwangwen/open-capacity-platform    
-    
-    
-    
+## 网关的作用分类
+
+网关作为所有请求的流量入口，主要承担着安全，限流，熔断降级，监控，日志，风控，鉴权等功能，网关主要有两种类型
+
+1. 一种是接入层网关（access gateway），主要负责路由，WAF（防止SQL Injection, XSS, 路径遍历, 窃取敏感数据,CC攻击等），限流，日志，缓存等，这一层的网关主要承载着将请求路由到各个应用层网关的功能
+
+2. 另一种是应用层网关，比如现在流行的微服务，各个服务可能是用不同的语言写的，如 PHP，Java 等，那么接入层就要将请求路由到相应的应用层集群，再由相应的应用层网关进行鉴权等处理，处理完之后再调用相应的微服务进行处理，应用层网关也起着路由，超时，重试，熔断等功能。
+
+Web应用防护系统（也称为：网站应用级入侵防御系统。英文：Web Application Firewall，简称： WAF）。利用国际上公认的一种说法：Web应用防火墙是通过执行一系列针对HTTP/HTTPS的安全策略来专门为Web应用提供保护的一款产品。
+
+
+
+
+
+
 ---------------------------------------------------------------------------------------------------------------------    
     
     
