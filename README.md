@@ -1,9 +1,85 @@
-项目地址
+项目地址  
 https://github.com/youngzil/quickstart-gateway
 
 
+---------------------------------------------------------------------------------------------------------------------  
+- [API服务网关](#API服务网关)
+    - [Open Service Broker API](#Open-Service-Broker-API)
+    - [SpringGateway和Zuul比较](#SpringGateway和Zuul比较)
+    - [京东京麦开放平台网关与消息高可用架构](#京东京麦开放平台网关与消息高可用架构)
+    - [如何设计一个安全的对外接口](#如何设计一个安全的对外接口)
+    - [浙江网管微服务管控平台](#浙江网管微服务管控平台)
+    - [网关之降级、熔断、限流、隔离、幂等性验证、超时重试机制](#网关之降级-熔断-限流-隔离-幂等性验证-超时重试机制)
+    - [API网关](#API网关)
+    - [软硬件负载均衡](#软硬件负载均衡)
+    - [错误码如何设计才合理](#错误码如何设计才合理)
+- [常见的API网关开放平台](#常见的API网关开放平台)
+    - [阿里云API网关](#阿里云API网关)
+    - [能力开放平台](#能力开放平台)
+    - [抖音开放平台](#抖音开放平台)
+    - [京东到家开放平台](#京东到家开放平台)
+- [API网关框架](#API网关框架)
+    - [Tengine](#Tengine)
+        - [tengine学习](#tengine学习)
+        - [tengine部署](#tengine部署)
+    - [Nginx](#Nginx)
+        - [Ngin学习](#Ngin学习)
+        - [Nginx部署](#Nginx部署)
+        - [谈谈Nginx快的原因](#谈谈Nginx快的原因)
+    - [Zuul](#Zuul)
+    - [Zuul2](#Zuul2)
+    - [常见API网关](#常见API网关)
+
+---------------------------------------------------------------------------------------------------------------------  
+## API服务网关
+
+### [Open-Service-Broker-API](docs/gateway/Open Service Broker API.md)
+### [SpringGateway和Zuul比较](docs/gateway/SpringGateway和Zuul比较.md)
+### [京东京麦开放平台网关与消息高可用架构](docs/gateway/京东京麦开放平台网关与消息高可用架构.pdf)
+### [如何设计一个安全的对外接口](docs/gateway/如何设计一个安全的对外接口.md)
+### [浙江网管微服务管控平台](docs/gateway/浙江网管微服务管控平台.md)
+### [网关之降级-熔断-限流-隔离-幂等性验证-超时重试机制](docs/gateway/网关之降级、熔断、限流、隔离、幂等性验证、超时重试机制.md)
+### [API服务网关](docs/API服务网关.md)
+### [能力开放平台](docs/OpenPlatform/能力开放平台.md)
+### [软硬件负载均衡](docs/gateway/软件、硬件负载均衡.md)
+### [错误码如何设计才合理](docs/gateway/错误码如何设计才合理.md)
+
+
+---------------------------------------------------------------------------------------------------------------------  
+## 常见的API网关开放平台
+
+### [阿里云API网关](docs/gateway/阿里云API网关.md)
+
+### [抖音开放平台](docs/OpenPlatform/抖音开放平台)
+### [京东到家开放平台](docs/OpenPlatform/京东到家开放平台)
+
+
+---------------------------------------------------------------------------------------------------------------------  
+
+## API网关框架
+
+
+### Tengine
+#### [tengine学习](docs/tengine/tengine学习.md)
+#### [tengine部署](docs/tengine/tengine部署.md)
+
+### Nginx
+#### [Ngin学习](docs/nginx/Ngin学习.md)
+#### [Nginx部署](docs/nginx/Nginx部署.md)
+#### [谈谈Nginx快的原因](docs/nginx/谈谈Nginx快的原因.md)
+
+
+
+### [Zuul](docs/nginx/Zuul.md)
+### [Zuul2](docs/nginx/Zuul2.md)
+### [OpenResty](docs/nginx/OpenResty.md)
+### [常见API网关](docs/nginx/常见API网关.md)
+
+
+---------------------------------------------------------------------------------------------------------------------  
+
 限流框架：Sentinel、resilience4j、Hystrix、SnowJena
-参考
+参考  
 quickstart-netflix/quickstart-hystrix
 
 
