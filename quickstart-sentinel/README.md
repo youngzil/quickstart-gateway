@@ -57,3 +57,9 @@ DefaultNode中有ClusterNode和OriginNode
 
 
 
+[Sentinel中的冷启动限流算法](https://juejin.im/post/6856034352943104008)
+
+
+
+
+
