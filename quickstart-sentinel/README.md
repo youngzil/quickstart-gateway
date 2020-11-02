@@ -1,9 +1,11 @@
-https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D
+Sentinel: 分布式系统的流量防卫兵
+
+[Sentinel Github](https://github.com/alibaba/Sentinel)  
+[Sentinel文档](https://github.com/alibaba/Sentinel/wiki/%E4%BB%8B%E7%BB%8D)
 
 
-zuul2集成Zuul2 integration 
-https://github.com/alibaba/Sentinel/pull/1138
 
+[Zuul2集成Sentinel](https://github.com/alibaba/Sentinel/pull/1138)
 
 比如Zuul2流控
 1、ContextUtil.enter，最后finally中执行ContextUtil.exit()

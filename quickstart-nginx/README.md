@@ -1,25 +1,23 @@
+[Nginx官网](http://nginx.org/)  
+[Nginx文档](https://nginx.org/en/docs/)  
+[Nginx下载](https://nginx.org/en/download.html)  
+[Nginx Github](https://github.com/nginx/nginx)  
 
-http://nginx.org/
-https://nginx.org/en/docs/
-
-https://www.nginx.com/
-https://www.nginx.com/resources/wiki/
-
-
-下载
-https://nginx.org/en/download.html
+[Nginx Dockerfile](http://dockerfile.github.io/#/nginx)  
+[Nginx Dockerfile Github](https://github.com/dockerfile/nginx)  
 
 
-https://github.com/nginx/nginx
-https://github.com/dockerfile/nginx
-http://dockerfile.github.io/#/nginx
+
+[Nginx中文文档](http://www.nginx.cn/doc/)  
+[Nginx的中文维基](http://tool.oschina.net/apidocs/apidoc?api=nginx-zh)  
+[Nginx介绍](https://www.oschina.net/p/nginx)  
 
 
-http://www.nginx.cn/doc/
-http://tool.oschina.net/apidocs/apidoc?api=nginx-zh
+[Nginx网站](https://www.nginx.com/)  
+[Nginx资源](https://www.nginx.com/resources/wiki/)  
 
 
-https://www.oschina.net/p/nginx
+
 
 Nginx（发音同 engine x）是一款轻量级的 Web 服务器/反向代理服务器及电子邮件（IMAP/POP3）代理服务器，并在一个 BSD-like 协议下发行，可以在 UNIX、GNU/Linux、BSD、Mac OS X、Solaris，以及 Microsoft Windows 等操作系统中运行。
 

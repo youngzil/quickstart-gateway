@@ -1,12 +1,15 @@
-1、下载
-2、编译安装和运行
-   nginx.conf文件的结构
-3、负载均衡和健康检查
-4、记一次生产环境Nginx间歇性502的事故分析过程
-nginx配置打印日志格式
+- [下载](#下载)
+- [编译安装和运行](#编译安装和运行)
+- [Nginx.conf文件的结构](#Nginx.conf文件的结构)
+- [负载均衡和健康检查](#负载均衡和健康检查)
+- [记一次生产环境Nginx间歇性502的事故分析过程](#记一次生产环境Nginx间歇性502的事故分析过程)
+- [Nginx配置打印日志格式](#Nginx配置打印日志格式)
+
+
 
 ---------------------------------------------------------------------------------------------------------------------
-下载
+
+## 下载
 
 http://nginx.org/
 https://nginx.org/en/docs/
@@ -57,6 +60,8 @@ https://www.jianshu.com/p/12a1dc4ab7a0
 
 
 ---------------------------------------------------------------------------------------------------------------------
+## 编译安装和运行
+
 编译安装和运行：./configure  &&  make  &&  make  install
 
 
@@ -102,15 +107,15 @@ make && make install
 
 
 /usr/local/nginx/sbin/nginx start|stop|restart 启动和关闭ngix服务
- 访问 http://ip地址
+访问 http://ip地址
 
- 5》nginx命令参数
-   nginx -m 显示所有加载的模块
-   nginx -l 显示所有可以使用的指令
-   nginx -t 检查nginx的配置文件是否正确
-   nginx 启动nginx
-   nginx -s reload 重启nginx
-   nginx -s stop 停止nginx
+5》nginx命令参数
+ nginx -m 显示所有加载的模块
+ nginx -l 显示所有可以使用的指令
+ nginx -t 检查nginx的配置文件是否正确
+ nginx 启动nginx
+ nginx -s reload 重启nginx
+ nginx -s stop 停止nginx
 /usr/local/webserver/nginx/sbin/nginx -s reload            # 重新载入配置文件
 /usr/local/webserver/nginx/sbin/nginx -s reopen            # 重启 Nginx
 /usr/local/webserver/nginx/sbin/nginx -s stop              # 停止 Nginx
@@ -137,7 +142,7 @@ make && make install
 
 
 
-nginx.conf文件的结构
+## Nginx.conf文件的结构
 同样的配置，内层的更详细的配置为准
 http块：server 块是多个监听端口服务，location 块是对应的path处理模块
 
@@ -187,7 +192,7 @@ https://www.jianshu.com/p/320a48fcef57
 https://blog.csdn.net/tjcyjd/article/details/50695922
 
 ---------------------------------------------------------------------------------------------------------------------
-3、负载均衡和健康检查
+## 负载均衡和健康检查
 
 参考
 /Users/yangzl/git/quickstart-gateway/docs/tengine/tengine部署.md
@@ -284,13 +289,13 @@ https://blog.csdn.net/liaomin416100569/article/details/72897641
 
 ---------------------------------------------------------------------------------------------------------------------
 
-记一次生产环境Nginx间歇性502的事故分析过程
+## 记一次生产环境Nginx间歇性502的事故分析过程
 
 参考
 https://xiezefan.me/2017/09/27/nginx-502-bug-trace/
 
 ---------------------------------------------------------------------------------------------------------------------
-nginx配置打印日志格式
+## Nginx配置打印日志格式
 
 
 log_format main escape=json '{ "@timestamp": "$time_iso8601", '
@@ -309,10 +314,3 @@ log_format main escape=json '{ "@timestamp": "$time_iso8601", '
 ---------------------------------------------------------------------------------------------------------------------
 
 
-
-
-
-
-
-
----------------------------------------------------------------------------------------------------------------------
