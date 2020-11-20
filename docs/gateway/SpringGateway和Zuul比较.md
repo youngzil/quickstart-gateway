@@ -39,15 +39,10 @@ Gateway：
 
 Spring  WebFlux是随Spring 5推出的响应式Web框架。
 1、spring-webflux支持两种开发模式：
-        （1）类似于Spring WebMVC的基于注解（@Controller、@RequestMapping）的开发模式；
-        （2）Java 8 lambda风格的函数式开发模式。
+    （1）类似于Spring WebMVC的基于注解（@Controller、@RequestMapping）的开发模式；
+    （2）Java 8 lambda风格的函数式开发模式。
 
 2、WebFlux是基于响应式流的，可以用来建立异步、非阻塞、事件驱动的服务。默认采用Reactor作为响应式流的实现库，也提供对RxJava的支持。
-路在脚下
-
-
-
-
 
 
 

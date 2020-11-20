@@ -107,15 +107,15 @@ http://192.168.80.11/status
 
 
 
-interval表示每隔3000毫秒向后端发送健康检查包 
-rise表示如果连续成功次数达到2 服务器就被认为是up 
-fail表示如果连续失败次数达到5 服务器就被认为是down
-timeout表示后端健康请求的超时时间是1000毫秒 
+interval表示每隔3000毫秒向后端发送健康检查包
+rise表示如果连续成功次数达到2 服务器就被认为是up
+fail表示如果连续失败次数达到5服务器就被认为是down
+timeout表示后端健康请求的超时时间是1000毫秒
 type表示发送的健康检查包是http请求
 
 check_http_send 表示http健康检查包发送的请求内容。为了减少传输数据量，推荐采用“head”方法
 
-check_http_expect_alive 指定HTTP回复的成功状态，默认认为2XX和3XX的状态是健康的。
+check_http_expect_alive指定HTTP回复的成功状态，默认认为2XX和3XX的状态是健康的。
 
 
 参考
