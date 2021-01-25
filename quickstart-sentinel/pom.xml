@@ -16,7 +16,7 @@
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <sentinel.version>1.7.2</sentinel.version>
+    <sentinel.version>1.8.0</sentinel.version>
 
   </properties>
 

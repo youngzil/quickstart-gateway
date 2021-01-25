@@ -141,6 +141,41 @@ make && make install
  TERM 和 INT 信号用于快速停止，QUIT 用于平缓停止。
 
 
+---------------------------------------------------------------------------------------------------------------------
+
+## 安装可能遇到的问题
+
+
+configure: error: Invalid C++ compiler or C++ compiler flags
+
+在安装 PCRE 软件时可能会报这个错误，这是因为系统缺失 gcc-c++ 库。CentOS下（我这里的环境是CentOS 7）root超级管理员用户执行以下命令，非root超级管理员前面加上 sudo 用以获取权限
+
+root超级管理员：
+# yum install -y gcc-c++
+
+普通用户：
+$ sudo yum install -y gcc-c++
+
+参考  
+[configure: error: Invalid C++ compiler or C++ compiler flags](https://blog.csdn.net/weixin_43930641/article/details/105313937)  
+
+
+
+CentOS8 安装openssl时 报错: Getopt/Long.pm
+
+
+[root@lims tengine-2.3.2]# yum install -y perl-Getopt-Long* --skip-broken
+
+
+参考  
+[CentOS8 安装openssl时 报错: Getopt/Long.pm](https://fujuhao.com/linux-centos-perl/)  
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------
+
 
 ## Nginx.conf文件的结构
 同样的配置，内层的更详细的配置为准

@@ -36,9 +36,6 @@
 
   <modules>
     <module>quickstart-litte-proxy</module>
-    <module>quickstart-kong</module>
-    <module>quickstart-nginx</module>
-    <module>quickstart-tengine</module>
     <module>quickstart-zuul</module>
     <!--    限流熔断降级-->
     <module>quickstart-sentinel</module>
