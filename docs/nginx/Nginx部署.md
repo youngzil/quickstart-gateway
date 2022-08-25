@@ -18,8 +18,8 @@ https://www.nginx.com/
 https://www.nginx.com/resources/wiki/
 
 
-下载
-https://nginx.org/en/download.html
+[nginx下载](https://nginx.org/en/download.html)  
+[nginx所有版本下载 ](http://nginx.org/download/)  
 
 
 https://github.com/nginx/nginx
